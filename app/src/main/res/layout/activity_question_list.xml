@@ -7,6 +7,11 @@
     android:layout_height="match_parent"
     tools:context=".QuestionList">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0."></LinearLayout>
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -29,14 +34,7 @@
         android:orientation="horizontal"
         >
 
-        <TextView
-            android:id="@+id/Username"
-            android:gravity="center"
-            android:textSize="22dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="번호" />
+
 
         <TextView
             android:id="@+id/question"
@@ -44,7 +42,7 @@
             android:textSize="22dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="7"
             android:text="제목" />
         <TextView
             android:id="@+id/Username2"
@@ -60,7 +58,7 @@
             android:textSize="22dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:text="답변 여부" />
     </LinearLayout>
 
@@ -72,16 +70,27 @@
         android:layout_marginRight="20dp"
         android:background="#C5C3C3"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/questionRecyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    <LinearLayout
 
-    <Button
-        android:id="@+id/questionbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="작성하기" />
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/questionRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/questionbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="작성하기" />
+
+    </LinearLayout>
+
+
 
 
 </LinearLayout>

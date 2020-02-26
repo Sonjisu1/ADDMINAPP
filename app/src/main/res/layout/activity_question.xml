@@ -27,7 +27,7 @@
         >
 
         <TextView
-            android:layout_weight="0.3"
+            android:layout_weight="0.2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -37,13 +37,14 @@
         </TextView>
       <EditText
 
-          android:layout_weight="0.7"
+          android:layout_weight="0.8"
           android:gravity="center"
+
           android:id="@+id/title1"
-          android:background="@drawable/button_design2"
+          android:background="@drawable/button_design"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="제목"
+          android:hint="제목"
           ></EditText>
 
     </LinearLayout>
@@ -70,10 +71,11 @@
            android:layout_height="wrap_content"
            android:layout_weight="0.8"
            android:id="@+id/writer"
-           android:gravity="center"
-           android:background="@drawable/button_design2"
 
-           android:text="김철수"></EditText>
+           android:gravity="center"
+           android:background="@drawable/button_design"
+
+           android:hint="작성자"></EditText>
 
 
 
@@ -123,11 +125,11 @@
        android:layout_marginTop="20dp"
        android:id="@+id/contents"
        android:padding="70dp"
-       android:background="@drawable/button_design2"
+    android:background="@drawable/button_design"
        android:layout_marginLeft="20dp"
        android:layout_marginRight="20dp"          android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:text="내요요용"></EditText>
+       android:hint="내용을 작성해주세요"></EditText>
     <Button
         android:id="@+id/questionconfirmbtn"
         android:layout_width="match_parent"

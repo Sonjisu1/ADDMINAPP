@@ -45,7 +45,7 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
         QuestionData questionData = mData.get(position);
 
 
-       holder.number.setText(questionData.getNumber());
+
        holder.title.setText(questionData.getTitle());
        holder.writer.setText(questionData.getWriter());
        holder.answer.setText(questionData.getAnswer());
@@ -64,14 +64,16 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
         TextView title;    // 제목
         TextView writer;   //작성자
         TextView answer;   //답변여부
-        TextView number;   //번호
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             title = itemView.findViewById(R.id.title);
             writer = itemView.findViewById(R.id.writer);
             answer= itemView.findViewById(R.id.answer);
-            number = itemView.findViewById(R.id.number);
+
+
+
 
             //뷰 객체에 대한 참조
 

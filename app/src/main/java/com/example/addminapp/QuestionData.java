@@ -5,19 +5,36 @@ import android.widget.TextView;
 public class QuestionData {
     String title;
     String writer;
-    String number;
-    String Answer;
+    String contents;
+    String answer;
+    String answercontents;
 
     public QuestionData(){
 
     }
 
-    public QuestionData(String number,String title,String writer,String answer){
-        this.number =number;
+    public QuestionData(String title,String writer,String answer,String contents){
+
         this.title= title;
         this.writer = writer;
-        this.Answer =answer;
+        this.answer =answer;
+        this.contents=contents;
     }
+
+    public QuestionData(String Answercontents){
+        this.answercontents = Answercontents;
+    }
+
+    public  String getAnswercontents() {
+        return answercontents;
+    }
+    public void setAnswercontents(String answercontents){
+        this.answercontents = answercontents;
+    }
+
+    public String getContents(){return contents;}
+    public void setContents(String contents){ this.contents = contents;}
+
 
     public String getTitle() {
         return title;
@@ -35,19 +52,15 @@ public class QuestionData {
         this.writer = writer;
     }
 
-    public String getNumber() {
-        return number;
-    }
 
-    public void setNumber(String number) {
-        this.number = number;
-    }
+
+
 
     public String getAnswer() {
-        return Answer;
+        return answer;
     }
 
     public void setAnswer(String answer) {
-        Answer = answer;
+        this.answer = answer;
     }
 }
