@@ -65,10 +65,11 @@ public class QuestionList extends AppCompatActivity {
                for(DataSnapshot snapshot: dataSnapshot.getChildren()){
                    QuestionData data = snapshot.getValue(QuestionData.class);
                    list.add(data);
+                   adapter.notifyDataSetChanged();
 
 
                }
-              adapter.notifyDataSetChanged();
+
 
            }
 
@@ -86,8 +87,8 @@ public class QuestionList extends AppCompatActivity {
                 //Answerquestion 화면에 보여주기 위해서 데이터를 전달함
                 intent.putExtra("writer",questionData.getWriter());
                 intent.putExtra("contents",questionData.getContents());
+                intent.putExtra("answercontents",questionData.getAnswercontents()); //답변내용
 
-               // Toast.makeText(getApplicationContext(),questionData.getContents(),Toast.LENGTH_SHORT).show();
 
                 startActivity(intent);
             }

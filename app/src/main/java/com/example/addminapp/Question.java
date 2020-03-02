@@ -50,7 +50,7 @@ public class Question extends AppCompatActivity {
                 title = titleedt.getText().toString();       //작성한 결과값 가져오기
                 writer = writeredt.getText().toString();        //작성한 결과값 가져오기
                 contents = contentsedt.getText().toString();     //작성한 결과값 가져오기
-                users = new Users(title,writer,"진행중",contents); //user class에 데이터 저장
+                users = new Users(title,writer,"진행중",contents,"미답변"); //user class에 데이터 저장
 
 
                 databaseReference.child("users").child(writer).setValue(users);
