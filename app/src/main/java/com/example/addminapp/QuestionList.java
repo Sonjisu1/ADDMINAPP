@@ -58,7 +58,7 @@ public class QuestionList extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
-       reference.addListenerForSingleValueEvent(new ValueEventListener() {
+       reference.addValueEventListener(new ValueEventListener() {
            @Override
            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                list.clear();
